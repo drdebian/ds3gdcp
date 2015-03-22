@@ -57,7 +57,7 @@ The following files were used to create "step5.txt":
 Since the task given only requires to go forward with the means and standard deviations and output meaningful variable names, the script uses only 86 of the available 561 measurement variables and renames them at the same time (see table below for choice of variables and their new names). Note: For the final file "step5.txt" an additional prefix "AverageOf" was added to the meaningful variable name to indicate the summarized nature of the data.
 
 original name | meaningful name in tidy data set
---|--
+---------------|----------------------------------
 tBodyAcc-mean()-X | TimeBodyAccelerationMeanOnXAxis
 tBodyAcc-mean()-Y | TimeBodyAccelerationMeanOnYAxis
 tBodyAcc-mean()-Z | TimeBodyAccelerationMeanOnZAxis
