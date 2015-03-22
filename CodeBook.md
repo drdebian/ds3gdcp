@@ -23,6 +23,10 @@ Features are normalized and bounded within [-1,1].
 
 Source: Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset for Human Activity Recognition Using Smartphones. 21th European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning, ESANN 2013. Bruges, Belgium 24-26 April 2013.
 
+## Task description
+
+The R script called run_analysis.R should process the input data and provide a tidy and summarized version of the means and standard deviations of the variables per subject and activity.
+
 
 ## File usage from source
 
@@ -48,10 +52,12 @@ The following files were used to create "step5.txt":
 8. summarize the data set by subject and activity, prefixing the resulting variable names with "AverageOf" (i.e. "TimeBodyAccelerationMeanOnXAxis" -> "AverageOfTimeBodyAccelerationMeanOnXAxis")
 9. write the result to "step5.txt"
 
-## Variable names transformation
+## Variable usage and name transformation
 
-original name | meaningful name
--------------------------------|-------------------------------------------------------------------
+Since the task given only requires to go forward with the means and standard deviations and output meaningful variable names, the script uses only 86 of the available 561 measurement variables and renames them at the same time (see table below for choice of variables and their new names). Note: For the final file "step5.txt" an additional prefix "AverageOf" was added to the meaningful variable name to indicate the summarized nature of the data.
+
+original name | meaningful name in tidy data set
+--|--
 tBodyAcc-mean()-X | TimeBodyAccelerationMeanOnXAxis
 tBodyAcc-mean()-Y | TimeBodyAccelerationMeanOnYAxis
 tBodyAcc-mean()-Z | TimeBodyAccelerationMeanOnZAxis
@@ -139,11 +145,11 @@ fBodyBodyAccJerkMag-std() | FrequencyBodyAccJerkMagnitudeStandardDeviation
 fBodyBodyGyroMag-std() | FrequencyBodyGyroMagnitudeStandardDeviation
 fBodyBodyGyroJerkMag-std() | FrequencyBodyGyroJerkMagnitudeStandardDeviation
 
-Note: For the final file "step5.txt" an additional prefix "AverageOf" was added to the meaningful variable name to indicate the summarized nature of the data.
 
-## Data dictionary
+## Data dictionary of summarized data set
 
-* subject: integers from 1 to 30 indication the individual the data was recorded from, aged 19 - 48.
+* subject:
+    + integers from 1 to 30 indication the individual the data was recorded from, aged 19 - 48.
 * activity: one of six activities of daily living
     + walking
     + walking upstairs
@@ -151,5 +157,6 @@ Note: For the final file "step5.txt" an additional prefix "AverageOf" was added 
     + sitting
     + standing
     + laying
-* variables: tidy set of all mean and standard deviation measurements for each subject and activity
+* variables: 
+    + tidy set of all mean and standard deviation measurements for each subject and activity, averaged by subject and activity
 
